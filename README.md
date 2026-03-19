@@ -74,7 +74,30 @@ The frontend supports two modes:
 - `api` mode: talks to the Java backend
 - `browser` mode: stores data in browser `localStorage`
 
-If the Java API is not reachable, the frontend falls back to browser mode automatically. This makes GitHub Pages deployment possible without hosting Java separately
+If the Java API is not reachable, the frontend falls back to browser mode automatically. This makes GitHub Pages deployment possible without hosting Java separately.
+
+## Deploy to GitHub Pages
+
+This repository includes a GitHub Actions workflow that builds the frontend from `web/` and publishes the compiled site to the `gh-pages` branch.
+
+The deployed site runs in browser mode and stores demo data in `localStorage`, which means:
+
+- visitors can try the app online without running Java
+- local downloads can still use the Java backend and CLI
+
+To enable GitHub Pages for the repository:
+
+1. Open the repository on GitHub.
+2. Go to `Settings` -> `Pages`.
+3. Set the source to `Deploy from a branch`.
+4. Select branch `gh-pages` and folder `/(root)`.
+5. Push to `master` or run the workflow manually.
+
+The expected Pages URL is:
+
+```text
+https://alpsten.github.io/daycare-for-animals/
+```
 
 ## Contributors
 
@@ -90,5 +113,4 @@ Current project contributors:
 - Add real GitHub profile links for Carolina, Danny, Robin, and Tilde in the frontend footer and in this README.
 - Replace the placeholder footer routes with real About, Contact, Privacy, and Terms pages or sections.
 - Add a proper About section in the frontend instead of a placeholder link.
-- Add a small README section for deployment steps to GitHub Pages.
 - Add automated tests for the Java service layer and key frontend flows.

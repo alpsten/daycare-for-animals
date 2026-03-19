@@ -205,7 +205,7 @@ export default function App() {
           </p>
         </div>
         <div className="hero-mark" aria-hidden="true">
-          <img src="/brand-paws.svg" alt="" className="brand-mark" />
+          <img src={`${import.meta.env.BASE_URL}brand-paws.svg`} alt="" className="brand-mark" />
         </div>
       </header>
 
