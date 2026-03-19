@@ -3,6 +3,8 @@ name: Deploy Frontend to GitHub Pages
 on:
   push:
     branches: ["master"]
+    paths-ignore:
+      - "docs/**"
   workflow_dispatch:
 
 permissions:
@@ -40,19 +42,18 @@ jobs:
           VITE_DATA_MODE: browser
           VITE_BASE_PATH: /daycare-for-animals/
 
-      - name: Prepare static site
-        run: touch web/dist/.nojekyll
-
-      - name: Publish to gh-pages branch
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Refresh docs site
         run: |
-          cd web/dist
-          git init
-          git checkout -B gh-pages
+          rm -rf docs
+          mkdir -p docs
+          cp -R web/dist/. docs/
+          touch docs/.nojekyll
+
+      - name: Commit docs output
+        run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          git commit -m "Deploy GitHub Pages" || echo "No changes to commit"
-          git remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
-          git push --force origin gh-pages
+          git add docs
+          git diff --cached --quiet && exit 0
+          git commit -m "Update GitHub Pages site" --no-verify
+          git push

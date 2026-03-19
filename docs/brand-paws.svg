@@ -1,0 +1,18 @@
+<svg width="320" height="120" viewBox="0 0 320 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g fill="#9B5728">
+    <g transform="translate(10 10)">
+      <ellipse cx="24" cy="38" rx="12" ry="18"/>
+      <ellipse cx="60" cy="18" rx="12" ry="18"/>
+      <ellipse cx="106" cy="18" rx="12" ry="18"/>
+      <ellipse cx="142" cy="42" rx="12" ry="18"/>
+      <path d="M82 40C63 40 42 54 34 76C30 87 33 101 47 104C60 107 67 100 82 98C97 100 104 107 117 104C131 101 134 87 130 76C122 54 101 40 82 40Z"/>
+    </g>
+    <g transform="translate(168 10)">
+      <ellipse cx="24" cy="38" rx="12" ry="18"/>
+      <ellipse cx="60" cy="18" rx="12" ry="18"/>
+      <ellipse cx="106" cy="18" rx="12" ry="18"/>
+      <ellipse cx="142" cy="42" rx="12" ry="18"/>
+      <path d="M82 40C63 40 42 54 34 76C30 87 33 101 47 104C60 107 67 100 82 98C97 100 104 107 117 104C131 101 134 87 130 76C122 54 101 40 82 40Z"/>
+    </g>
+  </g>
+</svg>

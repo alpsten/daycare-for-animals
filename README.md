@@ -78,7 +78,7 @@ If the Java API is not reachable, the frontend falls back to browser mode automa
 
 ## Deploy to GitHub Pages
 
-This repository includes a GitHub Actions workflow that builds the frontend from `web/` and publishes the compiled site to the `gh-pages` branch.
+This repository includes a GitHub Actions workflow that builds the frontend from `web/` and writes the compiled site into the `docs/` folder on `master`.
 
 The deployed site runs in browser mode and stores demo data in `localStorage`, which means:
 
@@ -90,7 +90,7 @@ To enable GitHub Pages for the repository:
 1. Open the repository on GitHub.
 2. Go to `Settings` -> `Pages`.
 3. Set the source to `Deploy from a branch`.
-4. Select branch `gh-pages` and folder `/(root)`.
+4. Select branch `master` and folder `/docs`.
 5. Push to `master` or run the workflow manually.
 
 The expected Pages URL is:
