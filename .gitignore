@@ -27,3 +27,13 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+### Java ###
+*.class
+
+### Local runtime data ###
+/data/
+
+### Frontend ###
+node_modules/
+web/dist/

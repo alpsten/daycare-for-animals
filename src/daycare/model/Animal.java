@@ -1,3 +1,5 @@
+package daycare.model;
+
 public abstract class Animal implements IAnimal {
     private final String name;
     private final String food;

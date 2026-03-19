@@ -1,13 +1,12 @@
-Carolina Fromm;07012341234
-Cat;Mario;Fisk;Ingen;true
-Bird;Bowser;Ärtor;Ingen;false
+Jane Doe;07012341234
+Dog;Rex;Dry food;None;true
+Bird;Daisy;Seeds;None;false
 
-Danny Yari;07212341234
-Bird;Birdo;Solrosfrön;Ingen;true
+John Doe;07212341234
+Cat;Dallas;Wet food;None;true
 
-Tilde Hv;07312341234
-Cat;Link;Kattfoder;Ingen;false
+Alex Smith;07312341234
+Cat;Texas;Dry food;None;false
 
-Robin Öqvist;07612341234
-Cat;Toad;Whiskas;Ingen;false
-
+Sam Taylor;07612341234
+Dog;Buddy;Dry food;Joint care;false

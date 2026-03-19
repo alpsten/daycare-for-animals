@@ -1,3 +1,5 @@
+package daycare.model;
+
 public class Bird extends Animal {
     public Bird(String name, String food, String medication) {
         super(name, food, medication);
@@ -8,4 +10,3 @@ public class Bird extends Animal {
         System.out.println("\033[1m\033[3m –– Kvitter-kvitter! –– \033[0m");
     }
 }
-

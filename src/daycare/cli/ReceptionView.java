@@ -1,3 +1,5 @@
+package daycare.cli;
+
 import java.util.Scanner;
 
 public class ReceptionView {
@@ -19,8 +21,18 @@ public class ReceptionView {
         return scanner.nextLine().trim();
     }
 
+    public String prompt(String message) {
+        displayMessage(message);
+        return getInput();
+    }
+
     public void displayMessage(String message) {
         System.out.println(message);
+    }
+
+    public void beep() {
+        System.out.print("\u0007");
+        System.out.flush();
     }
 
 }
