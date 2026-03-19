@@ -85,8 +85,6 @@ Current project contributors:
 - Robin
 - Tilde
 
-GitHub profile links can be added here later.
-
 ## TODO
 
 - Add real GitHub profile links for Carolina, Danny, Robin, and Tilde in the frontend footer and in this README.
