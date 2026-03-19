@@ -135,22 +135,12 @@ select:focus {
 }
 
 .hero {
-  display: grid;
-  grid-template-columns: minmax(20rem, 27rem) minmax(0, 1fr);
-  gap: 1.4rem;
-  align-items: start;
+  display: block;
   margin-bottom: 1.1rem;
 }
 
 .hero-copy {
   min-width: 0;
-}
-
-.hero-mark {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding-top: 0.3rem;
 }
 
 .eyebrow {
@@ -171,6 +161,8 @@ select:focus {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  gap: 1rem;
+  flex-wrap: nowrap;
 }
 
 .hero h1 {
@@ -178,21 +170,14 @@ select:focus {
   font-size: clamp(2.15rem, 4vw, 3.9rem);
   line-height: 0.96;
   max-width: none;
+  white-space: nowrap;
 }
 
 .brand-mark {
-  width: min(13rem, 30vw);
+  width: min(9.5rem, 22vw);
   height: auto;
   object-fit: contain;
-}
-
-.lede {
-  display: grid;
-  gap: 0.1rem;
-  max-width: 62rem;
-  color: var(--muted);
-  margin-top: 0.65rem;
-  font-size: 0.96rem;
+  flex: 0 0 auto;
 }
 
 .status-grid {
@@ -597,7 +582,7 @@ select:focus {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  align-items: center;
+  align-items: flex-start;
   margin-top: 1.2rem;
   padding: 0.95rem 1.1rem;
   border-radius: 24px;
@@ -615,6 +600,7 @@ select:focus {
 }
 
 .footer-contributors span {
+  width: 100%;
   color: var(--muted);
   font-size: 0.86rem;
   text-transform: uppercase;
@@ -642,14 +628,8 @@ select:focus {
 }
 
 @media (max-width: 1100px) {
-  .hero,
   .layout {
     grid-template-columns: 1fr;
-  }
-
-  .hero-mark {
-    justify-content: flex-start;
-    padding-top: 0;
   }
 }
 
@@ -669,10 +649,40 @@ select:focus {
 
   .site-footer {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-contributors,
+  .footer-routes {
+    justify-content: center;
+  }
+
+  .footer-contributors {
+    order: 1;
+    width: 100%;
+  }
+
+  .footer-contributors span {
+    text-align: center;
+  }
+
+  .footer-routes {
+    order: 2;
+    width: 100%;
+  }
+
+  .title-row {
+    flex-wrap: nowrap;
+    gap: 0.65rem;
+  }
+
+  .hero h1 {
+    white-space: nowrap;
+    font-size: clamp(1.28rem, 6.6vw, 1.75rem);
   }
 
   .brand-mark {
-    width: 8.5rem;
+    width: min(4.4rem, 20vw);
   }
 }

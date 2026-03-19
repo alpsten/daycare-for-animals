@@ -198,14 +198,8 @@ export default function App() {
           <p className="eyebrow">Reception Console Reimagined</p>
           <div className="title-row">
             <h1>Daycare for Animals</h1>
+            <img src={`${import.meta.env.BASE_URL}brand-paws.svg`} alt="" className="brand-mark" />
           </div>
-          <p className="lede">
-            <span>A TypeScript reception desk on top of the Java rules engine.</span>
-            <span>The frontend stays light, the business logic stays authoritative.</span>
-          </p>
-        </div>
-        <div className="hero-mark" aria-hidden="true">
-          <img src={`${import.meta.env.BASE_URL}brand-paws.svg`} alt="" className="brand-mark" />
         </div>
       </header>
 
@@ -536,18 +530,19 @@ export default function App() {
       </main>
 
       <footer className="site-footer">
+        <div className="footer-contributors">
+          <span>Contributors</span>
+          <a href="#">Emil</a>
+          <a href="#">Carolina</a>
+          <a href="#">Danny</a>
+          <a href="#">Robin</a>
+          <a href="#">Tilde</a>
+        </div>
         <div className="footer-routes">
           <a href="#">About</a>
           <a href="#">Contact</a>
           <a href="#">Privacy</a>
           <a href="#">Terms</a>
-        </div>
-        <div className="footer-contributors">
-          <span>Contributors</span>
-          <a href="#">Carolina</a>
-          <a href="#">Danny</a>
-          <a href="#">Robin</a>
-          <a href="#">Tilde</a>
         </div>
       </footer>
     </div>
