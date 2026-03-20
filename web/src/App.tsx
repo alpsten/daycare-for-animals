@@ -530,20 +530,25 @@ export default function App() {
       </main>
 
       <footer className="site-footer">
-        <div className="footer-contributors">
-          <span>Contributors</span>
-          <a href="#">Emil</a>
-          <a href="#">Carolina</a>
-          <a href="#">Danny</a>
-          <a href="#">Robin</a>
-          <a href="#">Tilde</a>
-        </div>
-        <div className="footer-routes">
-          <a href="#">About</a>
-          <a href="#">Contact</a>
-          <a href="#">Privacy</a>
-          <a href="#">Terms</a>
-        </div>
+        <section className="footer-card">
+          <span className="footer-label">About</span>
+          <div className="footer-routes">
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+          </div>
+        </section>
+        <section className="footer-card">
+          <span className="footer-label">Contributors</span>
+          <div className="footer-contributors">
+            <a href="https://github.com/alpsten" target="_blank" rel="noreferrer">Emil</a>
+            <a href="https://github.com/CarolinaFromm" target="_blank" rel="noreferrer">Carolina</a>
+            <a href="https://github.com/Dannyyari" target="_blank" rel="noreferrer">Danny</a>
+            <a href="https://github.com/RobinOqvist" target="_blank" rel="noreferrer">Robin</a>
+            <a href="https://github.com/TildeHv" target="_blank" rel="noreferrer">Tilde</a>
+          </div>
+        </section>
       </footer>
     </div>
   );

@@ -110,7 +110,6 @@ Current project contributors:
 
 ## TODO
 
-- Add real GitHub profile links for Carolina, Danny, Robin, and Tilde in the frontend footer and in this README.
 - Replace the placeholder footer routes with real About, Contact, Privacy, and Terms pages or sections.
 - Add a proper About section in the frontend instead of a placeholder link.
 - Add automated tests for the Java service layer and key frontend flows.
