@@ -139,6 +139,31 @@ select:focus {
   margin-bottom: 1.1rem;
 }
 
+.landing {
+  position: relative;
+  z-index: 1;
+  min-height: calc(100vh - 2.7rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  text-align: center;
+}
+
+.landing .hero {
+  margin-bottom: 0;
+}
+
+.landing .title-row {
+  justify-content: center;
+}
+
+.welcome-button {
+  font-size: 1.1rem;
+  padding: 1rem 2.6rem;
+}
+
 .hero-copy {
   min-width: 0;
 }

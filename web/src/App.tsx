@@ -70,6 +70,7 @@ export default function App() {
   const [transferForm, setTransferForm] = useState<TransferFormState>(emptyTransferForm);
   const [openSection, setOpenSection] = useState<ActionSectionId | null>("register-owner");
   const [openOwnerPhone, setOpenOwnerPhone] = useState<string | null>(null);
+  const [view, setView] = useState<"landing" | "console">("landing");
 
   useEffect(() => {
     void loadDashboard();
@@ -188,20 +189,20 @@ export default function App() {
   const animalCount = owners.reduce((total, owner) => total + owner.animals.length, 0);
   const actionDisabled = busy;
 
+  if (view === "landing") {
+    return (
+      <div className="shell">
+        <div className="ambient ambient-a" />
+        <div className="ambient ambient-b" />
+        <Landing onEnter={() => setView("console")} />
+      </div>
+    );
+  }
+
   return (
     <div className="shell">
       <div className="ambient ambient-a" />
       <div className="ambient ambient-b" />
-
-      <header className="hero">
-        <div className="hero-copy">
-          <p className="eyebrow">Reception Console Reimagined</p>
-          <div className="title-row">
-            <h1>Daycare for Animals</h1>
-            <img src={`${import.meta.env.BASE_URL}brand-paws.svg`} alt="" className="brand-mark" />
-          </div>
-        </div>
-      </header>
 
       <main className="layout">
         <section className="panel forms-panel">
@@ -560,6 +561,25 @@ export default function App() {
     }
     return clientRef.current;
   }
+}
+
+function Landing({ onEnter }: { onEnter: () => void }) {
+  return (
+    <div className="landing">
+      <header className="hero">
+        <div className="hero-copy">
+          <p className="eyebrow">Reception Console Reimagined</p>
+          <div className="title-row">
+            <h1>Daycare for Animals</h1>
+            <img src={`${import.meta.env.BASE_URL}brand-paws.svg`} alt="" className="brand-mark" />
+          </div>
+        </div>
+      </header>
+      <button type="button" className="welcome-button" onClick={onEnter}>
+        Welcome
+      </button>
+    </div>
+  );
 }
 
 function StatCard({ label, value, accent = false }: { label: string; value: string; accent?: boolean }) {
