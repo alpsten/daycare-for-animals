@@ -155,11 +155,21 @@ select:focus {
   margin-bottom: 0;
 }
 
-.landing .title-row {
-  justify-content: center;
+.paw-scatter {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.paw-print {
+  position: absolute;
+  fill: var(--accent);
+  opacity: 0.16;
 }
 
 .welcome-button {
+  position: relative;
   font-size: 1.1rem;
   padding: 1rem 2.6rem;
 }
@@ -173,7 +183,7 @@ select:focus {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--accent-deep);
-  font-size: 0.78rem;
+  font-size: clamp(1rem, 2.2vw, 1.5rem);
   font-weight: 700;
 }
 

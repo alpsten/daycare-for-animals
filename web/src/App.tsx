@@ -563,22 +563,69 @@ export default function App() {
   }
 }
 
+const PAW_SCATTER: { top: string; left: string; size: string; rotate: number }[] = [
+  { top: "8%", left: "12%", size: "2.6rem", rotate: -18 },
+  { top: "16%", left: "80%", size: "3.4rem", rotate: 12 },
+  { top: "62%", left: "6%", size: "2.2rem", rotate: 30 },
+  { top: "74%", left: "88%", size: "3rem", rotate: -8 },
+  { top: "42%", left: "93%", size: "2rem", rotate: 45 },
+  { top: "85%", left: "42%", size: "2.8rem", rotate: -25 },
+  { top: "6%", left: "45%", size: "2rem", rotate: 60 },
+  { top: "32%", left: "3%", size: "3.2rem", rotate: -40 },
+  { top: "55%", left: "62%", size: "2.4rem", rotate: 20 },
+  { top: "92%", left: "16%", size: "2.6rem", rotate: 10 },
+  { top: "2%", left: "28%", size: "5.4rem", rotate: -15 },
+  { top: "68%", left: "24%", size: "6.2rem", rotate: 22 },
+  { top: "22%", left: "58%", size: "4.8rem", rotate: -35 },
+  { top: "48%", left: "8%", size: "5.6rem", rotate: 15 },
+  { top: "80%", left: "68%", size: "5rem", rotate: -12 },
+  { top: "4%", left: "92%", size: "4.4rem", rotate: 38 },
+  { top: "35%", left: "38%", size: "1.6rem", rotate: 50 },
+  { top: "95%", left: "58%", size: "2rem", rotate: -22 },
+  { top: "26%", left: "18%", size: "1.8rem", rotate: 8 },
+  { top: "58%", left: "78%", size: "1.6rem", rotate: -50 },
+  { top: "12%", left: "65%", size: "1.4rem", rotate: 28 },
+  { top: "88%", left: "5%", size: "4.6rem", rotate: -30 }
+];
+
 function Landing({ onEnter }: { onEnter: () => void }) {
   return (
     <div className="landing">
+      <div className="paw-scatter" aria-hidden="true">
+        {PAW_SCATTER.map((paw, index) => (
+          <PawPrint
+            key={index}
+            style={{
+              top: paw.top,
+              left: paw.left,
+              width: paw.size,
+              transform: `rotate(${paw.rotate}deg)`
+            }}
+          />
+        ))}
+      </div>
       <header className="hero">
         <div className="hero-copy">
           <p className="eyebrow">Reception Console Reimagined</p>
-          <div className="title-row">
-            <h1>Daycare for Animals</h1>
-            <img src={`${import.meta.env.BASE_URL}brand-paws.svg`} alt="" className="brand-mark" />
-          </div>
+          <h1>Daycare for Animals</h1>
         </div>
       </header>
       <button type="button" className="welcome-button" onClick={onEnter}>
         Welcome
       </button>
     </div>
+  );
+}
+
+function PawPrint({ style }: { style: React.CSSProperties }) {
+  return (
+    <svg className="paw-print" style={style} viewBox="0 0 160 120" aria-hidden="true">
+      <ellipse cx="24" cy="38" rx="12" ry="18" />
+      <ellipse cx="60" cy="18" rx="12" ry="18" />
+      <ellipse cx="106" cy="18" rx="12" ry="18" />
+      <ellipse cx="142" cy="42" rx="12" ry="18" />
+      <path d="M82 40C63 40 42 54 34 76C30 87 33 101 47 104C60 107 67 100 82 98C97 100 104 107 117 104C131 101 134 87 130 76C122 54 101 40 82 40Z" />
+    </svg>
   );
 }
 
